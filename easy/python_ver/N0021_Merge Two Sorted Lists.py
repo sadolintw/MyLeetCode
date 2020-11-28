@@ -1,10 +1,10 @@
-class ListNode:
+class vo.ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
 
 class Solution:
-    def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
+    def mergeTwoLists(self, l1: vo.ListNode, l2: vo.ListNode) -> vo.ListNode:
         values = []
         while(l1):
             values.append(l1.val)
@@ -22,18 +22,18 @@ class Solution:
         first = None
         for i in range(len(values)):
             if(list):
-                list.next = ListNode(values[i])
+                list.next = vo.ListNode(values[i])
                 list = list.next
             else:
-                list = ListNode(values[i])
+                list = vo.ListNode(values[i])
                 first = list
         return first
 
 #============================================
-# l1 = ListNode(1)
-# l2 = ListNode(2)
-l1 = ListNode(1, ListNode(2, ListNode(4)))
-l2 = ListNode(1, ListNode(3, ListNode(4)))
+# l1 = vo.ListNode(1)
+# l2 = vo.ListNode(2)
+l1 = vo.ListNode(1, vo.ListNode(2, vo.ListNode(4)))
+l2 = vo.ListNode(1, vo.ListNode(3, vo.ListNode(4)))
 temp = Solution()
 result = temp.mergeTwoLists(l1, l2)
 while(result):
